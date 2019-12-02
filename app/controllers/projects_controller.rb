@@ -1,8 +1,17 @@
 class ProjectsController < ApplicationController
   def index
+    # byebug
     begin 
       user = User.find(params.require(:user_id))
-      render json: user.active_projects
+      query = params.permit('q')[:q]
+      case query
+      when 'active' 
+        render json: user.active_projects
+      when 'completed'
+        render json: user.completed_projects
+      else 
+        render json: user.projects
+      end
     rescue ActiveRecord::RecordNotFound => e
       render json:{message: 'User not found'}
     end
