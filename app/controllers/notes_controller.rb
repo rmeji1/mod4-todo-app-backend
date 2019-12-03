@@ -1,7 +1,7 @@
 class NotesController < ApplicationController
   def index 
     project = Project.find(params.require(:project_id))
-    render project.notes
+    render json: project.notes
   end 
 
   def create 
