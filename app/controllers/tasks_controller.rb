@@ -15,7 +15,6 @@ class TasksController < ApplicationController
   def create
     project_id = params.require(:project_id)
     task = Task.create(task_params.merge({project_id: project_id}))
-    byebug
     if task.valid?
       render json: task
     else
