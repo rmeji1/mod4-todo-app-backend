@@ -25,7 +25,7 @@ class ChecklistsController < ApplicationController
 
   def update 
     begin
-      checklist = Checklist.find(params.require(:id)
+      checklist = Checklist.find(params.require(:id))
       checklist.update(checklist_params)
       render json: checklist
     rescue ActiveRecord::RecordNotFound => e
