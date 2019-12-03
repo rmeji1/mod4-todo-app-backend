@@ -6,12 +6,19 @@ class TagsController < ApplicationController
   end
 
   def create 
-    project_id = params.require(:project_id) 
-    tag = Tag.create(tag_params.merge({project_id: project_id}))
-    if tag.valid?
+    if params.include?(:project_id) 
+      project = Project.find(params.require(:project_id)) 
+      tag = Tag.find_by(tag_params)
+      if tag != nil
+        project.tags << tag
+      else
+        tag = Tag.create(tag_params)
+        project.tags << tag
+      end
       render json: tag
     else
-      render json: {error: "Error creating tag"}, status: 500
+      tag = Tag.create(tag_params)
+      render json: tag
     end
   end
 

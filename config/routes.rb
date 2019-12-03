@@ -19,6 +19,6 @@ Rails.application.routes.draw do
   end
 
   resources :notes, only: :destroy
-  resources :tags, only: [:index] 
+  resources :tags, only: [:index, :create] 
   resources :items, only: [:update]
 end
