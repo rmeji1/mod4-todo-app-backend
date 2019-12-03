@@ -1,6 +1,5 @@
 class ProjectsController < ApplicationController
   def index
-    # byebug
     begin 
       user = User.find(params.require(:user_id))
       query = params.permit('q')[:q]

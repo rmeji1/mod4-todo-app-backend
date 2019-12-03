@@ -10,8 +10,15 @@ Rails.application.routes.draw do
     resources :tags, only: [:index, :create]
   end
 
-  resources :tasks, only: :show
+  resources :tasks, only: :show do 
+    resources :checklists, only: [:index, :create]
+  end
+  
+  resources :checklists, only: [:show, :destroy, :update] do
+    resources :items, only: [:index, :create]
+  end
+
   resources :notes, only: :destroy
-  resources :tags, only: [:index] # want to show all projects with said tag
-  # get :tags, path:
+  resources :tags, only: [:index] 
+  resources :items, only: [:update]
 end
