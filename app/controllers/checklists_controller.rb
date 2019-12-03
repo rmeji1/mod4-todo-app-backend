@@ -35,7 +35,7 @@ class ChecklistsController < ApplicationController
 
   def destroy
     begin
-      checklist = Checklist.find(params.require(:id)
+      checklist = Checklist.find(params.require(:id))
       checklist.destroy
       render json: checklist
     rescue ActiveRecord::RecordNotFound => e
