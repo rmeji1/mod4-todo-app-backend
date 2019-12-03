@@ -7,5 +7,15 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.destroy_all
-User.create(username: 'emskaplann')
-User.create(username: 'rmejia')
+Project.destroy_all
+
+emir = User.create(username: 'emskaplann')
+rob = User.create(username: 'rmejia')
+
+Project.create({
+  "name": "Some name",
+  "description": 'Test project number one for our project.',
+  "deadline": 02-12-2019,
+  "priority": "low",
+  user: emir    
+})

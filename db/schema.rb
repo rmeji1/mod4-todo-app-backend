@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_02_195356) do
+ActiveRecord::Schema.define(version: 2019_12_03_023920) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 2019_12_02_195356) do
     t.bigint "task_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "name"
     t.index ["task_id"], name: "index_checklists_on_task_id"
   end
 
@@ -52,12 +53,17 @@ ActiveRecord::Schema.define(version: 2019_12_02_195356) do
     t.index ["user_id"], name: "index_projects_on_user_id"
   end
 
-  create_table "tags", force: :cascade do |t|
+  create_table "projects_tags", id: false, force: :cascade do |t|
     t.bigint "project_id", null: false
+    t.bigint "tag_id", null: false
+    t.index ["project_id", "tag_id"], name: "index_projects_tags_on_project_id_and_tag_id"
+    t.index ["tag_id", "project_id"], name: "index_projects_tags_on_tag_id_and_project_id"
+  end
+
+  create_table "tags", force: :cascade do |t|
     t.string "text"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["project_id"], name: "index_tags_on_project_id"
   end
 
   create_table "tasks", force: :cascade do |t|
@@ -80,6 +86,7 @@ ActiveRecord::Schema.define(version: 2019_12_02_195356) do
   add_foreign_key "items", "checklists"
   add_foreign_key "notes", "projects"
   add_foreign_key "projects", "users"
-  add_foreign_key "tags", "projects"
+  add_foreign_key "projects_tags", "projects"
+  add_foreign_key "projects_tags", "tags"
   add_foreign_key "tasks", "projects"
 end

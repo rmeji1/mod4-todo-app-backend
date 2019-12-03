@@ -13,4 +13,9 @@ class User < ApplicationRecord
     end
   end
   
+  def projects_with_tag(tag)
+    rojects.select do |project| 
+      project.tags.include?(tag) 
+    end
+  end
 end

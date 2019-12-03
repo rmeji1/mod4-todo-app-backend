@@ -27,7 +27,7 @@ class ProjectsController < ApplicationController
   end 
 
   def show
-    project = Project.find(params.permit(:id))
+    project = Project.find(params.require(:id))
     render json: project
   end
 
