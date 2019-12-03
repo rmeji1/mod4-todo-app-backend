@@ -10,7 +10,7 @@ Rails.application.routes.draw do
     resources :tags, only: [:index, :create]
   end
 
-  resources :tasks, only: :show do 
+  resources :tasks, only: [:show, :update]do 
     resources :checklists, only: [:index, :create]
   end
   

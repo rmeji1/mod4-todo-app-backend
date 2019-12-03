@@ -31,6 +31,12 @@ class TasksController < ApplicationController
     end
   end
 
+  def update
+    task = Task.find(params.require(:id))
+    task.update(task_params)
+    render json: task
+  end
+
   private 
   def task_params 
     params.require(:task).permit(:title, :deadline)
