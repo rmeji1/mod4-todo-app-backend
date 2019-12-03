@@ -7,7 +7,7 @@ class NotesController < ApplicationController
   def create 
     project_id = params.require(:project_id)
     note = Note.create(notes_params.merge({project_id: project_id}))
-    render note
+    render json: note
   end
 
   def destroy 
