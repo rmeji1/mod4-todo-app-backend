@@ -1,4 +1,6 @@
 class TasksController < ApplicationController
+  before_action :require_login
+
   def index 
     project = Project.find(params.require(:project_id))
     query = params.permit('q')[:q]

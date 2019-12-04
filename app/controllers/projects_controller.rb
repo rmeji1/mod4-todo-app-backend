@@ -1,6 +1,8 @@
 class ProjectsController < ApplicationController
+  before_action :require_login
+
   def index
-    begin 
+    begin
       user = User.find(params.require(:user_id))
       query = params.permit('q')[:q]
       case query
