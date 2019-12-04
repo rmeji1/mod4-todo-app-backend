@@ -22,5 +22,5 @@ Rails.application.routes.draw do
 
   resources :notes, only: :destroy
   resources :tags, only: [:index, :create] 
-  resources :items, only: [:update]
+  resources :items, only: [:update, :destroy]
 end

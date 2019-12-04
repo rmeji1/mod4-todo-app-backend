@@ -21,6 +21,13 @@ class ItemsController < ApplicationController
     item.update(item_params)
     render json: item
   end
+
+  def destroy 
+    item = Item.find(params.require(:id))
+    item.destroy
+    render json: item
+  end
+  
   private 
   def item_params
     params.require(:item).permit(:text, :is_completed)
