@@ -1,4 +1,6 @@
 class TagsController < ApplicationController
+  before_action :require_login
+
   def index
     return render json: Tag.all if !params.include?(:project_id)
     project = Project.find(params.require(:project_id))

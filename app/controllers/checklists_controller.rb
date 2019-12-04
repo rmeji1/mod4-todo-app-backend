@@ -1,4 +1,6 @@
 class ChecklistsController < ApplicationController
+  before_action :require_login
+
   def index 
     task = Task.find(params.require(:task_id))
     render json: task.checklists

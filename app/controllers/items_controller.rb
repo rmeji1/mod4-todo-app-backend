@@ -1,4 +1,6 @@
 class ItemsController < ApplicationController
+  before_action :require_login
+
   def index 
     begin 
       checklist = Checklist.find(params.require(:checklist_id))

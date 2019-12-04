@@ -1,4 +1,5 @@
 class LoginController < ApplicationController
+  
   def create
     user = User.find_by("lower(username) = ?", user_params[:username].downcase)
     if user && user.authenticate(user_params[:password])
