@@ -9,7 +9,8 @@ class ItemsController < ApplicationController
   end
 
   def create
-    checklist_id = params.require(:checklist_id)
+    checklist_id = params.require(:checklist_id) ,,
+
     item = Item.create(item_params.merge({checklist_id: checklist_id}))
     render json: item
   end
@@ -21,6 +22,6 @@ class ItemsController < ApplicationController
   end
   private 
   def item_params
-    params.require(:item).permit(:text)
+    params.require(:item).permit(:text, :is_completed)
   end
 end

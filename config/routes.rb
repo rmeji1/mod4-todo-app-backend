@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :login, only: [:create]
+
   resources :users, only: [:show, :create] do 
     resources :projects, only: [:index, :create] # shallow: true gives us [:index, :new, :create]
     resources :tags, only: [:show]
