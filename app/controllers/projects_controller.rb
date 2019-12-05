@@ -34,14 +34,14 @@ class ProjectsController < ApplicationController
 
   def update 
     # add validation
-    project = Project.find(params.permit(:id))
+    project = Project.find(params.require(:id))
     project.update(project_params)
     render json: project
   end
 
   def destroy 
     # add validation
-    project = Project.find(params.permit(:id))
+    project = Project.find(params.require(:id))
     project.update(is_deleted: true)
     render json: project
   end
