@@ -30,7 +30,7 @@ First of all, clone or fork-clone this repo and after that use the package manag
 ![Models](https://github.com/rmeji1/mod4-todo-app-backend/blob/master/schema.png)
 
 ## Demo 
-ADD LINK HERE
+Check out [ToDo App](https://arcane-sands-50858.herokuapp.com/)
 
 ## Contributing
 Pull requests are more than welcome. For major changes, please open an issue first to discuss what you would like to change.
