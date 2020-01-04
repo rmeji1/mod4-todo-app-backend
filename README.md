@@ -26,6 +26,13 @@ First of all, clone or fork-clone this repo and after that use the package manag
 2. rails db:migrate
 3. rails s
 ```
+## ScreenShots from App
+### DashBoard
+![DashBoard](https://i.ibb.co/8mSXTVW/Screen-Shot-2019-12-08-at-6-35-22-PM.png)
+### Project Tab
+![Project Tab](https://i.ibb.co/9Zf8sk1/Screen-Shot-2019-12-08-at-6-35-47-PM.png)
+### Modal Example
+![Modal Example](https://i.ibb.co/C21BtPR/Screen-Shot-2019-12-08-at-6-36-57-PM.png)
 ## Model Schema
 ![Models](https://github.com/rmeji1/mod4-todo-app-backend/blob/master/schema.png)
 
