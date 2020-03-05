@@ -18,13 +18,15 @@ These Languages and Frameworks are for Web and Mobile app. And this repo is just
 * [ToDo App React](https://github.com/emskaplann/to-do-app-frontend)
 
 ## Installation
-First of all, clone or fork-clone this repo and after that use the package manager **npm** to install ToDo App's packages locally. After all of that, you can basically run **"npm start"** to see the project in your browser.
+First of all, clone or fork-clone this repo and after that use the **bundler** to install ToDo App's packages locally. After all of that, you can basically run **run the commands below** to see the project in your browser.
 > Make sure you are in the Project Path before writing the commands.
 
 ```bash
+1. bundle install
 1. rails db:create
 2. rails db:migrate
 3. rails s
+-Server should be avaliable at http://localhost:3000/
 ```
 ## ScreenShots from App
 ### DashBoard
