@@ -28,6 +28,8 @@ First of all, clone or fork-clone this repo and after that use the **bundler** t
 3. rails s
 -Server should be avaliable at http://localhost:3000/
 ```
+After you succesfully launched the server please check our endpoints by visiting "http://localhost:3000/rails/info/routes".
+
 ## ScreenShots from App
 ### DashBoard
 ![DashBoard](https://i.ibb.co/8mSXTVW/Screen-Shot-2019-12-08-at-6-35-22-PM.png)
