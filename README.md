@@ -2,10 +2,6 @@
 This app was made by me and my partner Emir Kaplann([@emskaplann](https://github.com/emskaplann)). And this app was made for our portfolio. The main purpose of this app was learning **React.js** & **React-Bootstrap** & **JWT Authentication**.
 Checkout repos for [ToDo App Frontend React](https://github.com/emskaplann/to-do-app-frontend) and [ToDo App React Native Solution](https://github.com/emskaplann/to-do-app-mobile)
 ## Languages and Frameworks
-These Languages and Frameworks are for Web and Mobile app. And this repo is just containing **Web Front-End**.
-### Mobile
-* [React Native](https://facebook.github.io/react-native/)
-* [Native-Base](https://nativebase.io/)
 ### Front-End
 * [React.js](https://reactjs.org/)
 * [React-Bootstrap](https://react-bootstrap.github.io/)
@@ -14,7 +10,6 @@ These Languages and Frameworks are for Web and Mobile app. And this repo is just
 * [Ruby on Rails 6.0](https://rubyonrails.org/)
 * [JWT Authentication](https://jwt.io/)
 #### Link to Related Repos
-* [ToDo-App-Mobile](https://github.com/emskaplann/to-do-app-mobile)
 * [ToDo App React](https://github.com/emskaplann/to-do-app-frontend)
 
 ## Installation
@@ -41,7 +36,7 @@ After you succesfully launched the server please check our endpoints by visiting
 ![Models](https://github.com/rmeji1/mod4-todo-app-backend/blob/master/schema.png)
 
 ## Demo 
-Check out [ToDo App](https://arcane-sands-50858.herokuapp.com/)
+Check out [ToDo App](https://emskaplann.github.io/to-do-app-frontend/#/)
 
 ## Contributing
 Pull requests are more than welcome. For major changes, please open an issue first to discuss what you would like to change.
